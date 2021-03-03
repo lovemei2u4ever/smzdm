@@ -52,8 +52,8 @@ jobs:
         run: |
           curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买自动签到失败！
 
-      - name: Send tg notification
-        uses: appleboy/telegram-action@master
+      - name: Telegram Message Notify
+        uses: appleboy/telegram-action@v0.1.0
         #if: always()
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
