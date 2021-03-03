@@ -43,9 +43,5 @@ jobs:
         run: python main.py #>SMZDM_Bot.log
 
       - name: Send tg notification
-        uses: appleboy/telegram-action@master
-        #if: always()
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: Workflow ran succeed！
+        run: |
+        curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/SMZDM Bot ran succeed！
