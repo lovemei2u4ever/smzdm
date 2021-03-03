@@ -42,7 +42,7 @@ jobs:
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
         run: python main.py #>SMZDM_Bot.log
 
-<<<<<<< HEAD
+
       - name: Send bark notification
         run: |
           curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买自动签到执行完成！
@@ -51,7 +51,7 @@ jobs:
         if: failure()
         run: |
           curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买自动签到失败！
-=======
+
       - name: Send tg notification
         uses: appleboy/telegram-action@master
         #if: always()
@@ -59,4 +59,3 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: smzdm.com签到完成了！
->>>>>>> parent of e55d9ff (Update main.yml)
