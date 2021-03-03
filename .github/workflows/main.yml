@@ -42,6 +42,11 @@ jobs:
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
         run: python main.py #>SMZDM_Bot.log
 
-      - name: Send tg notification
+      - name: Send bark notification
         run: |
-          curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/SMZDM Bot ran succeed！
+          curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买自动签到执行完成！
+          
+      - name: Send bark notification
+        if: failure()
+        run: |
+          curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买自动签到失败！
