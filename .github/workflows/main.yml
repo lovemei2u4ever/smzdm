@@ -41,3 +41,11 @@ jobs:
           COOKIE: ${{ secrets.COOKIE }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
         run: python main.py #>SMZDM_Bot.log
+
+      - name: Send tg notification
+        uses: appleboy/telegram-action@master
+        #if: always()
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          args: 签到完成了！
