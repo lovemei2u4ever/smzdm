@@ -44,4 +44,4 @@ jobs:
 
       - name: Send tg notification
         run: |
-        curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/SMZDM Bot ran succeed！
+          curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/SMZDM Bot ran succeed！
