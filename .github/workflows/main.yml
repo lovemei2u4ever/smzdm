@@ -45,17 +45,9 @@ jobs:
 
       - name: Send bark notification
         run: |
-          curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买自动签到执行完成！
+          curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买签到通知/什么值得买自动签到执行成功！
           
       - name: Send bark notification
         if: failure()
         run: |
-          curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买自动签到失败！
-
-      - name: Telegram Message Notify
-        uses: appleboy/telegram-action@v0.1.0
-        #if: always()
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: smzdm.com签到完成了！
+          curl http://hk.19931026.xyz:8080/gujjwxzxlfqxsldw/什么值得买签到通知/什么值得买自动签到失败！
